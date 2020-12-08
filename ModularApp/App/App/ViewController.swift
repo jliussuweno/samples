@@ -11,11 +11,16 @@ import Core
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var gotoButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let products = ProductService().getAllProducts()
         print(products)
+    }
+    
+    @IBAction func gotoButtonPressed(_ sender: Any) {
+        presentingViewController
     }
 }
 
